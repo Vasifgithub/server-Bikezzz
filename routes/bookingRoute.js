@@ -6,7 +6,6 @@ const { v4: uuidv4 } = require("uuid");
 var rand = require("random-key");
 
 router.post("/bookbike", async (req, res) => {
-  // const uid = await uuidv4();
 
   try {
     req.body.transactionId = uuidv4();
@@ -15,7 +14,7 @@ router.post("/bookbike", async (req, res) => {
     const car = await Car.findOne({ _id: req.body.car });
     car.bookedTimeSlots.push(req.body.bookedTimeSlots);
     await car.save();
-    res.send("Your booking is successful");
+    res.send("Your purchase is successful");
   } catch (err) {
     console.log(err);
     return res.status(400).json(err);

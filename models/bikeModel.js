@@ -33,10 +33,6 @@ const carSchema = new mongoose.Schema(
       },
     ],
     rentPerHour: { type: Number, required: true },
-    // admin: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "admin",
-    // }
   },
   { timestamps: true }
 );

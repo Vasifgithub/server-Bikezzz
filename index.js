@@ -12,10 +12,10 @@ const UserRoute = require("./routes/user");
 const carsRoute = require("./routes/bikes");
 const BookingRoute = require("./routes/bookingRoute");
 
-app.use("/bikes/", carsRoute);
-app.use("/user/", UserRoute);
-app.use("/bookings/", BookingRoute);
-app.use("/adminLogin/", AdminLoginRoute);
+app.use("/api/bikes/", carsRoute);
+app.use("/api/users/", UserRoute);
+app.use("/api/bookings/", BookingRoute);
+app.use("/api/admin/", AdminLoginRoute);
 
 app.get("/", (req, res) => res.send("Hello Pumpkin"));
 
